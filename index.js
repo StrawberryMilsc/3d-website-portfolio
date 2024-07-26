@@ -6,7 +6,7 @@ const scene = new THREE.Scene()
 const loader = new GLTFLoader();
 
 loader.load(
-    '../models/trial.glb',  
+    'models/trial.glb',  
     function(gltf) {
         scene.add(gltf.scene)
     },
