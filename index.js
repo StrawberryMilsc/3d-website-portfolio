@@ -25,19 +25,29 @@ const loader = new GLTFLoader();
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
+const light = new THREE.PointLight(0xf60fff, 1, 100);
+light.position.set(5,5,5);
+scene.add(light);
 const sizes = {
     width: window.innerWidth/2,
     height: window.innerHeight/2
 }
+const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height, 0.1, 100)
+camera.position.set(0,-10,10)
+scene.add(camera)
+
 const screenSize = new THREE.Vector2(sizes.width,sizes.height);
 const ico_geo = new THREE.SphereGeometry(5,32,32)
 const ico_mat = new THREE.ShaderMaterial({
     uniforms: {
         time: {value:1.0},
-        screenSize: {
-            value:screenSize
-        },
-        rad_js: {value: 5}
+        light_pos: {value: light.position},
+        camera_pos: {value: camera.position},
+        diffuse: {value: new THREE.Vector4(0.5,0.5,0.5,1.0)},
+        color_i: {value: light.color},
+        specular: {value: new THREE.Vector4(1.0,1.0,1.0,1.0)},
+        shininess: {value: 5000},
+        ambient: {value: new THREE.Vector4(0.1,0.1,0.1,1.0)}
     },
 
     vertexShader: trial_v,
@@ -48,9 +58,7 @@ scene.add(ico);
 
 
 
-const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height, 0.1, 100)
-camera.position.set(0,-10,10)
-scene.add(camera)
+
 
 
 var controls = new OrbitControls( camera, renderer.domElement );
