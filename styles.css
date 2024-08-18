@@ -1,7 +1,58 @@
+html {
+    background-color: black;
+}
+
 h1 {
     font-size: 1cm;
+    
 }
 
 #main {
     font-size: 1cm;
+    position: relative;
+    text-align: center;
 }
+
+body {
+    background-color: white;
+}
+
+#para {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+   
+}
+
+div {
+
+}
+
+#p5Container {
+    height: 25rem;
+}
+
+#SideBySide {
+
+}
+#space {
+    padding: 1rem;
+}
+#paragraph {
+    font-size: 1.2rem;
+    
+}
+
+canvas {
+    display: block;
+}
+
+script {
+
+}
+
+#p5js {
+
+}
+

@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Engine</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
 
 </head>
-<h1 id="main">Exploration into custom shaders in GLSL</h1>
 
-<body>
-    Insert Text
+
+<body id="para">
+    <h1 id="main">A Brief Explanation of Physics Engines</h1>
+    
+<div id="paragraph">Physics Engines are the cornerstone of both 2d and 3d games which involve forces and 
+movements. While in many games they can be very complex to take into account many different 
+factors (wind, gravity, gliding etc). Let’s look at creating a simple Physics Engine and 
+some of the simple math that can have a powerful effect in a game and make it engaging and realistic.
+</div>
+<div id="space"></div>
+<div id="paragraph">The first step is to outline what it is we want to accomplish. To keep it simple, lets
+    make a simple bouncing ball. I have made a simple sketch in p5js for us to experiment with. We'll first draw our ball and the ground:
+</div>
+    <div id="space"></div> 
+    <div id="p5Container">
+        <script id="p5js" src="sketches\Phys_Engine\ball1.js"></script>
+    </div>
+    <div id="space"></div> 
+<div id="paragraph"> 
+    Now we have our ball and our ground we have to look at what we want to accomplish. Since we want the ball to bounce we have two things to consider: Gravity and Collision. We need
+    Gravity to allow our ball fall towards the ground and we need collisions to make sure the ball bounces off the ground and doesn't fall offscreen. 
+</div>
+
 </body>
 
 </html>
