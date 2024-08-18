@@ -46,4 +46,15 @@ canvas {
     display: block;
 }
 
+#defaultCanvas0 {
+    float: none;
+    overflow: auto;
+    width: 400;
+    height: 400;
+}
 
+#p5sketch {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}

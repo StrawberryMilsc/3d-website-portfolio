@@ -1,12 +1,19 @@
 var cnv;
+var w;
+var h;
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
+  ogar = w/h
+  ar = windowWidth/windowHeight
+  resizeCanvas(400*(ar/ogar),400*ar/ogar);
   cnv.position(x, y);
 }
 
 function setup() {
-  cnv = createCanvas(400, 400);
+    h = windowHeight;
+    w = windowWidth;
+  cnv = createCanvas(400,400 );
   cnv.parent("p5Container")
   centerCanvas();
   background(255, 0, 200);
