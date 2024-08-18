@@ -1,5 +1,6 @@
 html {
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -33,9 +34,6 @@ div {
     height: 25rem;
 }
 
-#SideBySide {
-
-}
 #space {
     padding: 1rem;
 }
@@ -48,11 +46,4 @@ canvas {
     display: block;
 }
 
-script {
-
-}
-
-#p5js {
-
-}
 
