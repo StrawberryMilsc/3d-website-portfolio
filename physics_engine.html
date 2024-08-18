@@ -6,6 +6,8 @@
     <title>Physics Engine</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
     <script id="p5js" src="sketches\Phys_Engine\ball2.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     
 
 </head>
@@ -24,17 +26,33 @@ some of the simple math that can have a powerful effect in a game and make it en
     make a simple bouncing ball. Our scene will involve a ball and the ground, and the ball should bounce off the ground. I have made a simple sketch in p5js for us to experiment with. We'll first draw our ball and the ground:
 </div>
 <div id="space"></div> 
-    <div id="p5sketch">
+    <div id="p5sketch" class="p5form">
         <!-- <script id="p5js" src="sketches\Phys_Engine\ball1.js"></script> -->
     </div>
 <div id="space"></div> 
 <div id="paragraph"> 
     Now we have our ball and our ground. Since we want the ball to bounce we have two things to consider: Gravity and Collision. We need
-    Gravity to allow our ball fall towards the ground and we need collisions to make sure the ball bounces off the ground and doesn't fall offscreen.
+    Gravity to allow our ball to fall towards the ground and we need collisions to make sure the ball bounces off the ground and doesn't fall offscreen. We can tackle these one at a time.
+    <br /> Starting with Gravity the standard way to deal with forces and acceleration is to store each of those values and augment them each frame. We will have an acceleration value, a speed value and a position value and they
+    will feed into each other to give a smooth realistic movement.
 </div>
-<!-- <div id="p5sketch2"> -->
+<div id="space"></div> 
+<pre><code class="language-javascript">
+    function helloWorld() {
+        console.log("Hello, World!");
+    }
+    </code></pre>
+<div id="paragraph">
+
+</div>
+<div id="p5sketch2" class="p5form"> 
     
-<!-- </div> -->
+</div>
+<div id="space"></div> 
+
+<div id="p5sketch3" class="p5form">
+
+</div>
 
 
 </body>
