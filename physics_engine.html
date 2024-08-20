@@ -28,10 +28,7 @@ some of the simple math that can have a powerful effect in a game and make it en
 </div>
 <div id="space"></div> 
 
-<div id="p5sketch" class="p5form">
-
-
-</div>
+<div id="p5sketch" class="p5form"></div>
 
 <div id="space"></div> 
 <div id="paragraph"> 
@@ -46,6 +43,7 @@ some of the simple math that can have a powerful effect in a game and make it en
     Our update function is where the real magic is, it is called every frame. We want the acceleration to affect the speed of the ball and we want the speed to update the position of the ball. So we add 
     our acceleration to the speed and add the speed to the position to move the ball.
 </div>
+<div id="space"></div> 
 <pre><code id="cod" class="language-javascript">
     var xPos = sketch.width/2; //Inital location of the ball
     var yPos = sketch.height/4;
@@ -114,11 +112,15 @@ to not overlap the ground to avoid any untoward bugs that may arise.
         }
     }
     </code></pre>
-<div id="p5sketch3" class="p5form">
-
-</div>
-
-
+<div id="space"></div>
+<div id="p5sketch3" class="p5form"></div>
+<div id="space"></div>
+<div id="paragraph">Voila! We have a bouncing ball. To recap, we added gravity by keeping track of our speed and position, and updated them to reflect the affect
+    of a constant force being applied, and then we handled collisions by checking for overlaps and implementing the behaviour we want. This is 
+    a simple demonstration, and if you are so minded playing around with p5js, or other creative coding tools you can learn more. Hopefully you gained a little insight into some of the complex
+    things going on behind the scenes of physics engines. This is on the simpler side, but I hope you can appreciate the work and thought
+that goes into making the video games you love.  </div>
+<div id="space"></div>
 </body>
 
 </html>
