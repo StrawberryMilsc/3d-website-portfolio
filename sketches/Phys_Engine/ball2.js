@@ -150,7 +150,7 @@ var s = function( sketch ) {
     var cnv;
     var w;
     var h;
-    const rad = 70;
+    var rad = 70;
     var xPos;
     var yPos;
     var xSpeed = 0;
@@ -161,7 +161,7 @@ var s = function( sketch ) {
     var rectPosY;
     var rectWidth;
     const rectHeight = 50;
-    const max_speed = 1000;
+    const max_speed = 20;
 
     sketch.windowResized = function() { 
         w_n = window.innerWidth
@@ -188,12 +188,14 @@ var s = function( sketch ) {
         
         if (window.innerWidth > 900) {
             rectPosY = sketch.height-50;
+            rad = 70;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,70);
             sketch.fill(100,0,100,255)
             sketch.rect(0,sketch.height-50,sketch.width,50)
         } else if (window.innerWidth > 500) {
             rectPosY = sketch.height-30;
+            rad = 50;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,50)
             sketch.fill(100,0,100,255)
@@ -201,6 +203,7 @@ var s = function( sketch ) {
         }   
         else {
             rectPosY = sketch.height-10;
+            rad = 30;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,30);
             sketch.fill(100,0,100,255)
