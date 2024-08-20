@@ -71,7 +71,7 @@ var s = function( sketch ) {
     var ySpeed = 0;
     var xAcc = 0;
     var yAcc = 1;
-    const max_speed = 20;
+    const max_speed = 1000;
     let butt;
     sketch.windowResized = function() { 
         w_n = window.innerWidth
@@ -136,10 +136,10 @@ var s = function( sketch ) {
         yPos += ySpeed;
 
         if (xSpeed > max_speed) {
-            xSpeed = 20;
+            xSpeed = max_speed;
         }
         if (ySpeed > max_speed) {
-            ySpeed = 20;
+            ySpeed = max_speed;
         }
         
     }
@@ -161,7 +161,7 @@ var s = function( sketch ) {
     var rectPosY;
     var rectWidth;
     const rectHeight = 50;
-    const max_speed = 10;
+    const max_speed = 1000;
 
     sketch.windowResized = function() { 
         w_n = window.innerWidth
@@ -187,17 +187,20 @@ var s = function( sketch ) {
         sketch.background(0);
         
         if (window.innerWidth > 900) {
+            rectPosY = sketch.height-50;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,70);
             sketch.fill(100,0,100,255)
             sketch.rect(0,sketch.height-50,sketch.width,50)
         } else if (window.innerWidth > 500) {
+            rectPosY = sketch.height-30;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,50)
             sketch.fill(100,0,100,255)
             sketch.rect(0,sketch.height-30,sketch.width,50)
         }   
         else {
+            rectPosY = sketch.height-10;
             sketch.fill(0,0,255,255)
             sketch.circle(xPos,yPos,30);
             sketch.fill(100,0,100,255)
@@ -227,12 +230,12 @@ var s = function( sketch ) {
         yPos += ySpeed;
         sketch.checkCollision()
 
-        // if (xSpeed > max_speed) {
-        //     xSpeed = 10;
-        // }
-        // if (ySpeed > max_speed) {
-        //     ySpeed = 10;
-        // }
+        if (xSpeed > max_speed) {
+            xSpeed = max_speed;
+        }
+        if (ySpeed > max_speed) {
+            ySpeed = max_speed;
+        }
         
     }
 };
