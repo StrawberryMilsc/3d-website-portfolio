@@ -169,6 +169,15 @@ var s = function( sketch ) {
         xPos = sketch.width/2;
         yPos = sketch.height/4;
         sketch.drawElements()
+        sketch.reset();
+    }
+
+    sketch.reset = function() {
+        xSpeed = 0;
+        ySpeed = 0;
+        xPos = sketch.width/2;
+        yPos = sketch.height/4;
+
     }
     sketch.setup = function() {
         h = window.innerHeight;
