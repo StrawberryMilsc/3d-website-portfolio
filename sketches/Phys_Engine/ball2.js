@@ -183,15 +183,33 @@ var s = function( sketch ) {
         //cnv.parent("p5sketch")
         sketch.background(255, 0, 200);
     }
-
+    sketch.drawElements = function() {
+        sketch.background(0);
+        
+        if (window.innerWidth > 900) {
+            sketch.fill(0,0,255,255)
+            sketch.circle(xPos,yPos,70);
+            sketch.fill(100,0,100,255)
+            sketch.rect(0,sketch.height-50,sketch.width,50)
+        } else if (window.innerWidth > 500) {
+            sketch.fill(0,0,255,255)
+            sketch.circle(xPos,yPos,50)
+            sketch.fill(100,0,100,255)
+            sketch.rect(0,sketch.height-30,sketch.width,50)
+        }   
+        else {
+            sketch.fill(0,0,255,255)
+            sketch.circle(xPos,yPos,30);
+            sketch.fill(100,0,100,255)
+            sketch.rect(0,sketch.height-10,sketch.width,50)
+        }
+        
+        
+    }
 
     //Fix Colors
     sketch.draw = function() {
-        sketch.background(0);
-        sketch.fill(0,0,255,255)
-        sketch.circle(xPos,yPos,rad);
-        sketch.fill(100,0,100,255)
-        sketch.rect(rectPosX,rectPosY,rectWidth,rectHeight)
+        sketch.drawElements()
         sketch.update()
     }
 
