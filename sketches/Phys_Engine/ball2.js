@@ -161,7 +161,7 @@ var s = function( sketch ) {
     var rectPosY;
     var rectWidth;
     const rectHeight = 50;
-    const max_speed = 20;
+    const max_speed = 2000;
 
     sketch.windowResized = function() { 
         w_n = window.innerWidth
