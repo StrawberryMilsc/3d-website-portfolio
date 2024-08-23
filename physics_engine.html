@@ -16,15 +16,15 @@
 <body id="para">
     <h1 id="main">A Brief Explanation of Physics Engines</h1>
     
-<div id="paragraph">Physics Engines are the cornerstone of both 2d and 3d games which involve forces and 
-movements. In many games physics can be very complex, taking into account many different 
+<div id="paragraph">Physics Engines are the cornerstone of both 2D and 3D games which involve forces and 
+movements. In many games, physics can be complex, taking into account many different 
 factors (wind, gravity, gliding etc). Let’s look at creating a simple Physics Engine and explore
 some of the simple math that can have a powerful effect in a game to make it engaging and realistic.
 </div>
 <div id="space"></div>
-<div id="paragraph">The first step is to outline what it is we want to accomplish. To keep it simple, lets
-    make a simple bouncing ball. Our scene will involve a ball and the ground, and the ball should bounce off the ground. I have made a simple sketch in p5js for us to experiment with.
-     We'll first draw our ball and the ground:
+<div id="paragraph">The first step is to outline what we want to accomplish. As an example, lets
+    make a simple bouncing ball. Our scene involves two objects: a ball and the ground. We want the ball to bounce off the ground. I have made a simple sketch in p5js for us to experiment with.
+     Lets draw our ball and the ground:
 </div>
 <div id="space"></div> 
 
@@ -32,15 +32,15 @@ some of the simple math that can have a powerful effect in a game to make it eng
 
 <div id="space"></div> 
 <div id="paragraph"> 
-    Now we have our scene set up. Since we want the ball to bounce we have two things to consider: Gravity and Collision. We need
-    Gravity to allow our ball to fall towards the ground and we need collisions to make sure the ball bounces off the ground and doesn't fall offscreen. We can tackle these one at a time.
-    <br /> Starting with Gravity, the standard way to deal with forces and acceleration is to store each of those values and augment them each frame. We will have an acceleration value, a speed value and a position value and they
+    Now we have our scene set up. To make the ball bounce we have to consider two things: <b>Gravity</b> and <strong>Collision</strong>. We need
+    gravity to allow our ball to fall towards the ground and we need collisions to make sure the ball bounces off the ground and doesn't fall offscreen. We can tackle these one at a time.
+    <div id="space"></div> Starting with gravity, the standard way to deal with forces and acceleration is to store each of those values and augment them each frame. We will have an acceleration value, a speed value and a position value, and they
     will feed into each other to give a smooth realistic movement.
 </div>
 <div id="space"></div> 
-<div id="paragraph"> Below is the code that we will use to create this effect; 6 variables, two for position, two for speed, and two for acceleration. Each one represents position, speed
+<div id="paragraph"> Below is the code that we will use to create this effect. Six variables: two for position, two for speed, and two for acceleration. Each one represents position, speed
     or acceleration in the two different axes (x and y). This allows us to seperate any forces into those two directions. For now, we can ignore the x axis, as we only want the ball to bounce up and down.
-    Our update function is where the real magic is, it is run every frame. We want the acceleration to affect the speed of the ball and we want the speed to update the position of the ball. So we add 
+    Our update function runs every frame, and thats where the real magic happens. We want the acceleration to affect the speed of the ball and we want the speed to update the position of the ball. So we add 
     our acceleration to the speed and add the speed to the position to move the ball.
 </div>
 <div id="space"></div> 
@@ -81,16 +81,16 @@ some of the simple math that can have a powerful effect in a game to make it eng
 </div>
 <div id="wrapper"><button id="butt" onclick="myp5_2.reset()" class="reset" role="button">Reset</button></div>
 <div id="space"></div> 
-<div id="paragraph"> The ball may have already dropped below the screen so hit the reset button to watch it go again. We have created Gravity! Downward acceleration is set to 1, rather than the more realistic 9.8 meters per second squared because our update function
+<div id="paragraph"> The ball may have already dropped below the screen so hit the reset button to watch it go again. We have created gravity! Downward acceleration is set to 1, rather than the more realistic 9.8 meters per second squared because our update function
     runs every frame rather than every second. Ideally we would want the acceleration applied every second rather than every frame (average computers run 24 frames a second) for ultra realism
     but having something that looks and feels right can sometimes be more important than having something ultra realistic.
 </div>
 <div id="space"></div> 
 <div id="paragraph">
-Our next goal is to add collisions without which the ball will go through the ground. Collisions are, in game terms, looking for and handling moments of overlap between objects that we
+Our next goal is to add collisions, so the ball does not go through the ground. Collisions are, in game terms, looking for and handling moments of overlap between objects that we
  want to interact with each other. 
 In our case we want the ball to bounce off the ground. First we must check if the edge of the ball is overlapping the edge of the ground. Then we must set the speed of the ball to be 
-pointing in the other direction (Following the behaviour of Newton's Third law: Equal and opposite reaction). Then before we let the forces go to work, we must reset the ball's position to be 
+pointing in the other direction (Following the behaviour of Newton's Third law: Equal and opposite reaction). Before we let the forces go to work, we must reset the ball's position to be 
 just above the ground to not overlap the ground to avoid any untoward bugs that may arise.
 </div>
 <div id="space"></div> 
@@ -120,7 +120,7 @@ just above the ground to not overlap the ground to avoid any untoward bugs that 
 <div id="space"></div>
 <div id="paragraph"> This is 
     a simple demonstration, and if you are so minded, playing around with p5.js, or other creative coding tools you can learn more. Hopefully you gained a little insight into some of the complex
-    things going on behind the scenes of physics engines. This is on the simpler side, but I hope this demonstration can help you appreciate the work and thought
+    things that go on behind the scenes of physics engines. This is on the simpler side, but I hope this demonstration can help you appreciate the work and thought
 that goes into making the video games you love. </div>
 <div id="space"></div>
 <div><a href="https://github.com/StrawberryMilsc/3d-website-portfolio/blob/gh-pages/sketches/Phys_Engine/ball2.js">Code</a></div>
